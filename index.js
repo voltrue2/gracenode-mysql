@@ -1,4 +1,3 @@
-
 // FIXME: refactor this code.... very ugly
 /***
  * configurations
@@ -29,7 +28,7 @@ var async = require('async');
 var EventEmitter = require('events').EventEmitter;
 var mysql = require('mysql');
 
-var gracenode = require('../../');
+var gracenode = require('../gracenode');
 var log = gracenode.log.create('mysql');
 
 var poolMap = {};
