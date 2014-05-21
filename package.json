@@ -8,6 +8,7 @@
 		"url": "https://github.com/voltrue2/gracenode-mysql.git"
 	},
 	"dependencies": {
+		"node-uuid": "1.4.1",
 		"async": "0.8.0",
 		"mysql": "2.0.1"
 	},
