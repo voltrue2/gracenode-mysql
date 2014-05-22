@@ -2,6 +2,34 @@
 
 Mysql module for gracenode framework.
 
+This is designed to function within gracenode framework.
+
+## How to include it in my project
+
+To add this package as your gracenode module, add the following to your package.json:
+
+```
+"dependencies": {
+        "gracenode": "",
+        "gracenode-mysql": ""
+}
+```
+
+To use this module in your application, add the following to your gracenode bootstrap code:
+
+```
+var gracenode = require('gracenode');
+// this tells gracenode to load the module
+gracenode.use('gracenode-mysql');
+```
+
+To access the module:
+
+```
+// the prefix gracenode- will be removed automatically
+gracenode.mysql
+```
+
 Access
 <pre>
 gracenode.mysql
