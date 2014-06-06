@@ -268,10 +268,8 @@ MySql.prototype.exec = function (sql, params, cb) {
 				return cb(error);
 			}
 
-			log.info('query executed:', sql, params, transactionId);			
-
 			if (that._type === 'write') {
-				log.info('query results:', sql, params, result);
+				log.info('query results:', sql, params, result, transactionId);
 			}
 
 			cb(error, result);
