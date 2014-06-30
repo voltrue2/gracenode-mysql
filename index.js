@@ -191,9 +191,11 @@ MySql.prototype.getOne = function (sql, params, cb) {
 			return cb(error);
 		}
 		if (!res) {
+			log.error(sql, params);
 			return cb(new Error('no result'));
 		}
 		if (!res.length) {
+			log.error(sql, params);
 			return cb(new Error('found nothing'));
 		}
 		if (res.length) {
@@ -210,9 +212,11 @@ MySql.prototype.getMany = function (sql, params, cb) {
 			return cb(error);
 		}
 		if (!res) {
+			log.error(sql, params);
 			return cb(new Error('no result'));
 		}
 		if (!res.length) {
+			log.error(sql, params);
 			return cb(new Error('found nothing'));
 		}
 		cb(null, res);	
