@@ -157,6 +157,22 @@ MySqlGroup.prototype.searchMany = function (sql, params, cb) {
 	this._read.searchMany(sql, params, cb);
 };
 
+MySqlGroup.prototype.getOneFromMaster = function (sql, params, cb) {
+	this._write.getOne(sql, params, cb);
+};
+
+MySqlGroup.prototype.getManyFromMaster = function (sql, params, cb) {
+	this._write.getMany(sql, params, cb);
+};
+
+MySqlGroup.prototype.searchOneFromMaster = function (sql, params, cb) {
+	this._write.searchOne(sql, params, cb);
+};
+
+MySqlGroup.prototype.searchManyFromiMaster = function (sql, params, cb) {
+	this._write.searchMany(sql, params, cb);
+};
+
 MySqlGroup.prototype.write = function (sql, params, cb) {
 	this._write.write(sql, params, cb);
 };
