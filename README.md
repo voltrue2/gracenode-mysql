@@ -83,12 +83,20 @@ mysql.getOne('SELECT age, gender FROM people WHERE name = ?', ['bob'], function 
 });
 ```
 
+> **getOneFromMaster**
+
+Reads from "write-only" database.
+
 > **getMany**
 <pre>
 void getMany(String sql, Array params, Function callback)
 </pre>
 > Executes a "select" SQL query and passes results to callback
 >> If no result is found, the function will throw an error.
+
+> **getManyFromMaster**
+
+Reads from "write-only" database.
 
 > **searchOne**
 <pre>
@@ -97,6 +105,10 @@ void searchOne(String sql, Array params, Function callback)
 > Executes a "select" SQL query and passes a result to callback
 >> No result will **NOT** throw an error.
 
+> **searchOneFromMaster**
+
+Reads from "write-only" database.
+
 
 > **searchMany**
 <pre>
@@ -104,6 +116,10 @@ void searchMany(String sql, Array params, Function callback)
 </pre>
 > Executes a "select" SQL query and passes results to callback
 >> No result will **NOT** throw an error.
+
+> **searchManyFromMaster**
+
+Reads from "write-only" database.
 
 > **write**
 <pre>
