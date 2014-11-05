@@ -45,7 +45,8 @@ Configurations
 				"host": "host or IP address",
 				"user": "databaseUser",
 				"password": "databasePassword",
-				"poolSize": <int optional>
+				"poolSize": <int optional>,
+				"options": {} // optional
 			},
 			"write": {
 				"database": "databaseName",
@@ -53,11 +54,16 @@ Configurations
 				"user": "databaseUser",
 				"password": "databasePassword",
 				"poolSize": <int optional>
+				"options": {} // optional
 			}
 		}{...}
 	}
 }
 ```
+
+## Optional Configurations:
+
+`gracenode-mysql` supports connection options. To add options, add `options` in your configurations.
 
 #####API: *create*
 <pre>

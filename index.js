@@ -80,6 +80,12 @@ module.exports.setup = function (cb) {
 				password: conf.password,
 				port: conf.port || undefined,
 			};
+			// support for options
+			if (conf.options) {
+				for (var propName in conf.options) {
+					params[propName] = conf.options[propName];
+				}
+			}
 			var pool = mysql.createPool(params); 
 			poolMap[name] = pool;
 			
